@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".nested.activity.MainTwoActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_one"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="4 November - 5 November 2018"
+            android:gravity="center_vertical"
+            android:textSize="20sp"
+            android:textColor="@color/light_green_500"
+            android:paddingLeft="@dimen/spacing_large"/>
+
+        <ImageView
+            android:id="@+id/iv_calendar"
+            android:layout_width="25dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/calendar"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/spacing_mlarge"/>
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/search"
+            android:layout_toLeftOf="@id/iv_calendar"
+            android:layout_marginRight="@dimen/spacing_mxlarge"/>
+
+    </RelativeLayout>
+
+    <View style="@style/Divider"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_my_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/spacing_mlarge"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textColor="@color/light_green_500"
+            android:text="Kembali"
+            android:paddingLeft="@dimen/spacing_large"
+            android:textStyle="bold"/>
+
+        <Button
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_round_green"
+            android:text="Edit"
+            android:textColor="@color/white"
+            android:textAllCaps="false"/>
+
+        <Button
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_round_green"
+            android:text="Cetak Ulang Struk"
+            android:textColor="@color/white"
+            android:textAllCaps="false"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textColor="@color/light_green_500"
+            android:text="Hapus"
+            android:textStyle="bold"
+            android:gravity="right"
+            android:paddingRight="@dimen/spacing_large"/>
+
+    </LinearLayout>
+
+</LinearLayout>
